@@ -3,12 +3,15 @@ module.exports = function delay(time, callback) {
   let params = [];
 
   return function(...args) {
+    // recallable
     if (timer) {
-      removeTimeout(timer);
+      timer = clearTimeout(timer);
     }
 
-    params.push(args);
+    // concat all arguments
+    params.push(args.length > 1 ? args : args[0]);
 
+    // call if timeout is called (delay callback)
     timer = setTimeout(() => {
       callback(params);
       params.length = 0;
