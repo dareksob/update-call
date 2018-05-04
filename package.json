@@ -6,10 +6,7 @@
     "update-call": "src/update-call.js"
   },
   "main": "src/update-call.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "keywords": ["command-line","tool","watcher"],
+  "author": "Darius Sobczak<mail@dsobczak.de>",
   "license": "ISC"
 }
